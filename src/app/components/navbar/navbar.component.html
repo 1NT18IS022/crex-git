@@ -1,0 +1,20 @@
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class=""checkbtn>
+        <i class="fas fa-bars"></i>
+    </label>
+    <img width="100px" height="55px" src="https://static.cricbuzz.com/images/cb_logo.svg" alt="image not found">
+    <ul>
+        <li><a  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="">Live Score</a></li>
+        <li><a  routerLink="matches" routerLinkActive="active" href="">Matches</a></li>
+        <li><a routerLink="pointstable" routerLinkActive="active" href="">Point Table</a></li>
+        <li><a routerLink="ranking" routerLinkActive="active" href="">Ranking</a></li>
+        <li><a routerLink="players" routerLinkActive="active" href="">Players</a></li>
+        <li>
+            <button *ngIf="!isLoggedIn()" class="btn btn-danger p-1 mb-2 login">Login</button>
+        </li>
+        <li>
+            <button *ngIf="isLoggedIn()" class="btn btn-danger p-1 mb-2 logout">LogOut</button>
+        </li>
+     </ul>
+</nav>
